@@ -28,10 +28,14 @@ for t in range(1,T+1):
             oven.append((again[0], c))
 
     while len(oven) != 1:
-        if oven[0][1] == 0:
+        idx, c = oven[0]
+        c //= 2
+        if c == 0:
             oven.pop(0)
         else:
             again = oven.pop(0)
-            oven.append((again[0],again[1]//2))
+            oven.append((again[0],c))
 
     print(f"#{t} {oven[0][0]+1}")
+
+  
