@@ -17,7 +17,6 @@ for t in range(1,T+1):
             if A >= B:
                 cnt += (A-B+1) # A와 B의 차이에 1개 더 먹어야 경우 만족됨
                 A = B-1
-                continue
             if B >= C:
                 cnt += (B-C+1) # B와 C의 경우도 마찬가지임
                 B = C-1
